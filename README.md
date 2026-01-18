@@ -20,3 +20,20 @@ System based on supplier (merchant) product catalogs, **such as McDonald’s sel
 ## ``` Diagrama de Fluxo | Event-Driven Architecture Diagram  ```
 <img width="1536" height="1024" alt="ae6538b6-a108-47ab-8902-f24a256d2f29" src="https://github.com/user-attachments/assets/5e6b75a6-9a81-4327-831c-47ae05c71394" />
 
+
+- Stack Tecnológica
+
+◦ **AWS S3** – Armazenamento dos catálogos dos fornecedores (JSON)
+◦ **AWS SQS** – Fila de mensageria para eventos de catálogo
+◦ **AWS Lambda** – Processa os eventos e regras de negócio
+◦ **MongoDB (NoSQL)** – Persistência de dados de produtos e categorias
+◦ **API REST** – Exposição de endpoints para criação e atualização de dados
+
+## Fluxo 
+
+1. O fornecedor envia seu catálogo para um **bucket S3**
+2. Um evento é publicado em uma **fila SQS**
+3. Funções **AWS Lambda** consomem a mensagem e processam os dados
+4. As informações são normalizadas no **MongoDB**
+5. A **API** disponibiliza os dados para consumo por aplicações clientes
+
