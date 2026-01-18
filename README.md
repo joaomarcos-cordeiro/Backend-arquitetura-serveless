@@ -11,7 +11,7 @@ System based on supplier (merchant) product catalogs, **such as McDonald’s sel
 
 ## ``` Context (BusinessRules) ```
 
-◦ The system enables merchants to publish their ** product catalogs**, which are processed in an **asynchronous, scalable, and decoupled manner **, using an event-driven serverless architecture, implemented in Java.
+◦ The system enables merchants to publish their **product catalogs**, which are processed in an **asynchronous, scalable, and decoupled manner**, using an event-driven serverless architecture, implemented in Java.
 
 ◦ The insertion and processing of catalogs are handled through a **messaging layer**, ensuring high availability and fault tolerance.
  
